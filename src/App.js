@@ -7,6 +7,7 @@ import Search from "./components/products/Search";
 import AddProduct from "./components/products/AddProduct";
 import ProductDisplay from "./components/products/ProductDisplay";
 import ListProducts from "./components/products/ListProducts";
+import AddProductone from "./components/products/AddProductOne";
 
 function App() {
   return (
@@ -14,16 +15,16 @@ function App() {
       <nav>
         <Link to="/"> Home </Link>
         <Link to="login"> Login </Link>
-        <Link to="products/search"> Products </Link>
+        <Link to="products"> Products </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="products" element={<Products />}>
-          <Route path="search" element={<Search />} />
-          <Route path="list" element={<ListProducts />} />
+          <Route path="list" element={<ListProducts />} >
+               <Route path="1" element={<AddProductone />} />
+          </Route>
           <Route path="add" element={<AddProduct />} />
-          <Route path=":id" element={<ProductDisplay />} />
         </Route>
       </Routes>
     </Router>

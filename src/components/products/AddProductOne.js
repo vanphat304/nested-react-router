@@ -1,11 +1,11 @@
 import React from "react";
 
-function AddProduct() {
+function AddProductone() {
   return (
     <div className="listOfProducts">
-      <h1> Add Producdddt</h1>
+      <h1> Add Productone</h1>
     </div>
   );
 }
 
-export default AddProduct;
+export default AddProductone;
